@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/index_style.css">
+    <script src="JS/mine.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h1 class="text-info text-center mb-4">OUR STORE</h1>
+        <div class="container">
+            <label for="productName" class="text-info fw-bold"> Product Name</label>
+            <input type="text" id="productName" class="form-control mb-4 ">
+
+            <label for="productPrice" class="text-info fw-bold"> Product Price</label>
+            <input type="text" id="productPrice" class="form-control mb-4 ">
+
+            <label for="productCategory" class="text-info fw-bold"> Product Category</label>
+            <input type="text" id="productCategory" class="form-control mb-4  ">
+
+            <label for="productDescription" class="text-info fw-bold"> Product Description</label>
+            <textarea type="text" id="productDescription" class="form-control mb-4 "></textarea>
+            <button id="addBtn" class="btn btn-info  text-white" onclick="addProduct()">Add Product</button>
+            <button id="updateBtn" class="btn btn-warning  text-white" onclick="saveChanges()">Save Changes</button>
+
+
+        </div>
+        <input onkeyup="searchProductByName(this.value)" type="text" class="form-control w-50 mx-auto my-5"
+            placeholder="Search Product Name">
+
+
+        <table class="  table w-75 mx-auto">
+            <thead>
+                <th class="  text-info  bg-dark">Index</th>
+                <th class="  text-info bg-dark">Name</th>
+                <th class="  text-info bg-dark">Price</th>
+                <th class="  text-info bg-dark">Category</th>
+                <th class="  text-info bg-dark">Description</th>
+                <th class="text-warning bg-dark">Update</th>
+                <th class="text-danger bg-dark">Delete</th>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
